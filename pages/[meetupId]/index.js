@@ -33,8 +33,8 @@ export async function getStaticPaths() {
         fallback: 'blocking',
         paths: meetups.map(meetup => ({
             params: { meetupId: meetup._id.toString() }
-        }))
-    }
+        })),
+    };
 }
 
 export async function getStaticProps(context) {
@@ -53,8 +53,8 @@ export async function getStaticProps(context) {
                 address: selectedMeetup.address,
                 image: selectedMeetup.image,
                 description: selectedMeetup.description
-            }
-        }
-    }
+            },
+        },
+    };
 }
 export default MeetupDetails;
